@@ -1,0 +1,718 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbhar {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    background: #111827;
+    color: white;
+}
+
+.navbhar span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c084fc;
+}
+
+.navbhar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbhar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbhar a:hover {
+    color: #c084fc;
+}
+
+/* ---------- HOME ---------- */
+
+.block1 {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 15% 55% 30%;
+    align-items: center;
+    padding: 50px;
+    background: #ede9fe;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aside img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.nd {
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.nd h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.nd .p1 {
+    font-size: 22px;
+    color: #7e22ce;
+}
+
+.nd p {
+    font-size: 17px;
+}
+
+.nd button {
+    margin: 25px 15px 0 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #7e22ce;
+    color: white;
+    cursor: pointer;
+}
+
+.nd button:hover {
+    background: #581c87;
+}
+
+.nd button img {
+    vertical-align: middle;
+}
+
+.ni {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 50%;
+    background: #d8b4fe;
+    background-image: url("tarushi image.jpeg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 15px #aaa;
+}
+
+/* ---------- ABOUT ---------- */
+
+.aboutme {
+    padding: 60px 12%;
+    background: white;
+    text-align: center;
+}
+
+.aboutme h2,
+.education h2,
+.skills h2 {
+    margin-bottom: 25px;
+    color: #7e22ce;
+    font-size: 30px;
+}
+
+.aboutme p {
+    margin: 12px auto;
+    max-width: 800px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* ---------- EDUCATION ---------- */
+
+.education {
+    padding: 60px 8%;
+    background: #f5f3ff;
+    text-align: center;
+}
+
+.study {
+    display: inline-block;
+    width: 230px;
+    min-height: 150px;
+    margin: 15px;
+    padding: 25px 15px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7e22ce, #c084fc);
+    color: white;
+    box-shadow: 0 5px 15px #ccc;
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+.study:hover {
+    transform: translateY(-8px);
+}
+
+.study h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.study h5 {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.study h6 {
+    font-size: 14px;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills {
+    padding: 60px 12%;
+    background: white;
+    text-align: center;
+}
+
+.skills label {
+    display: block;
+    max-width: 700px;
+    margin: 20px auto 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.div {
+    width: 100%;
+    max-width: 700px;
+    height: 14px;
+    margin: auto;
+    border-radius: 10px;
+    background: #ddd;
+    overflow: hidden;
+}
+
+.htmldiv::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    background: #7e22ce;
+}
+.cssdiv::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background: #7e22ce;
+}
+.jsdiv::before {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background: #7e22ce;
+}
+.sqldiv::before {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    background: #7e22ce;
+}
+
+/* ---------- MOBILE VIEW ---------- */
+
+@media (max-width: 768px) {
+    .navbhar {
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbhar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .block1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    .aside {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nd h1 {
+        font-size: 35px;
+    }
+
+    .ni {
+        width: 200px;
+        height: 200px;
+    }
+    
+/* Projects Section */
+.projects {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.projects h2,
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 280px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.project-card h3 {
+    color: blueviolet;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card a:hover {
+    background-color: #333;
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: white;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #333;
+}
+
+}
+/* Projects Section */
+#projects{
+    text-align: center;
+}
+
+#project h2,
+#project p {
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact h2,
+#contact p {
+    text-align: center;
+}
+
+/* Home profile and projects */
+.block1 {
+    grid-template-columns: 60px minmax(0, 1fr) 280px;
+    gap: 30px;
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #ede9fe, #faf5ff);
+}
+
+.nd {
+    max-width: 620px;
+}
+
+.nd h1 {
+    color: #28123d;
+    font-size: clamp(38px, 5vw, 58px);
+}
+
+.nd p:not(.p1) {
+    color: #51465e;
+}
+
+.nd button {
+    border-radius: 24px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nd button:hover {
+    transform: translateY(-2px);
+}
+
+.ni {
+    width: min(250px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    border: 7px solid white;
+    box-shadow: 0 10px 30px rgba(70, 35, 100, 0.2);
+}
+
+.aside a {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(40, 20, 60, 0.12);
+}
+
+.aside a:hover {
+    transform: translateY(-3px);
+}
+
+.projects {
+    padding: 60px 8%;
+    background: #f5f3fa;
+}
+
+.projects h2 {
+    margin-bottom: 30px;
+    color: #6b21a8;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: min(300px, 100%);
+    border: 1px solid #eee8f5;
+    box-shadow: 0 6px 18px rgba(40, 20, 60, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(40, 20, 60, 0.16);
+}
+
+.project-card a {
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .block1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 45px 7%;
+    }
+
+    .ni {
+        order: 0;
+    }
+
+    .nd {
+        order: 1;
+    }
+
+    .aside {
+        order: 2;
+    }
+
+    .ni {
+        width: 190px;
+    }
+
+    .project-container {
+        align-items: center;
+    }
+}
+
+/* Extra profile and project details */
+.block1 {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f3ff;
+}
+
+.nd .p1:first-child {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.nd h1 {
+    margin: 8px 0 14px;
+}
+
+.nd button + button {
+    background: #581c87;
+}
+
+.nd button + button:hover {
+    background: #3b0764;
+}
+
+.ni {
+    background-color: #e9d5ff;
+    outline: 3px solid rgba(126, 34, 206, 0.15);
+    outline-offset: 6px;
+}
+
+.aside a {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aside a:hover {
+    box-shadow: 0 7px 16px rgba(70, 35, 100, 0.2);
+}
+
+.projects {
+    background-color: #f5f3ff;
+}
+
+.projects h2 {
+    font-weight: 700;
+}
+
+.project-card {
+    min-height: 220px;
+    border-top: 4px solid #a855f7;
+    border-radius: 12px;
+}
+
+.project-card h3 {
+    color: #6b21a8;
+}
+
+.project-card a {
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card a:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .nd {
+        text-align: center;
+    }
+
+    .nd p:not(.p1) {
+        margin: 0 auto;
+    }
+}
+
+/* Project section refinements */
+.projects {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 75px;
+    background: linear-gradient(180deg, #f5f3ff, #faf8ff);
+}
+
+.projects h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.projects h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 4px;
+    background: #a855f7;
+}
+
+.project-container {
+    align-items: stretch;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 260px;
+    max-width: 340px;
+    padding: 28px;
+    background: linear-gradient(145deg, #fff, #fcfaff);
+    text-align: left;
+}
+
+.project-card h3 {
+    font-size: 21px;
+}
+
+.project-card p {
+    flex-grow: 1;
+    margin-bottom: 8px;
+}
+
+.project-card a {
+    align-self: flex-start;
+    padding: 10px 18px;
+}
+
+.project-card a:focus-visible {
+    outline: 3px solid #c084fc;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .projects {
+        padding: 48px 6%;
+    }
+
+    .project-container {
+        gap: 18px;
+    }
+
+    .project-card {
+        flex-basis: 100%;
+        max-width: 380px;
+    }
+}
+
+/* Contact section refinements */
+.contact {
+    padding: 65px 8%;
+    background: linear-gradient(180deg, #fff, #faf8ff);
+}
+
+.contact h2 {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #6b21a8;
+}
+
+.contact p {
+    margin: 12px auto;
+    color: #51465e;
+    font-size: 17px;
+}
+
+.contact > a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 20px;
+    border-radius: 24px;
+    background: #7e22ce;
+    box-shadow: 0 5px 14px rgba(91, 33, 146, 0.2);
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact > a:hover {
+    transform: translateY(-2px);
+    background: #581c87;
+}
+
+.contact > a:focus-visible {
+    outline: 3px solid #c084fc;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 48px 6%;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+}
